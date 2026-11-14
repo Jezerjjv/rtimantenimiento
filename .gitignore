@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-ssr
+.npm-cache
+.qa
+scripts
+*.local
+.DS_Store
+.dsh-office-*
+_docx.txt
+.vercel
