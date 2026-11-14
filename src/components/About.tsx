@@ -3,9 +3,9 @@ import { SectionHead } from './SectionHead'
 import { ParallaxImage } from './ParallaxImage'
 
 const stats = [
-  { value: '6', label: 'Líneas de servicio' },
+  { value: '7', label: 'Líneas de servicio' },
   { value: '4', label: 'Normas y certificaciones' },
-  { value: '1', label: 'Proveedor integral' },
+  { value: '360°', label: 'Soluciones integrales' },
 ]
 
 export function About() {
@@ -27,16 +27,16 @@ export function About() {
             <div className="mt-10 grid gap-6 text-[15px] leading-relaxed text-ink/70 sm:grid-cols-2">
               <Reveal delay={0.05}>
                 <p>
-                  R.T.I Mantenimiento Ltda. — Recursos Técnicos Industriales — ofrece soluciones
-                  profesionales en todos los campos del mantenimiento industrial, fabricaciones y
-                  reparaciones de maquinaria.
+                  R.T.I Mantenimiento Ltda. — Recursos Técnicos Industriales Ltda. — es una empresa de
+                  servicios que ofrece a sus clientes soluciones profesionales en todos los campos del
+                  mantenimiento industrial, fabricaciones y reparaciones de maquinaria.
                 </p>
               </Reveal>
               <Reveal delay={0.12}>
                 <p>
-                  Trabajamos con soluciones integrales enfocadas en calidad, seguridad y cumplimiento
-                  normativo. Cada trabajo se planea, se ejecuta con personal propio y se entrega
-                  documentado.
+                  Ofrecemos soluciones integrales para el sector industrial, enfocadas en calidad,
+                  seguridad y cumplimiento normativo: mantenimiento mecánico y eléctrico, fabricación,
+                  mecanizado, montajes y suministro de personal.
                 </p>
               </Reveal>
             </div>
@@ -86,8 +86,9 @@ export function About() {
           <Reveal delay={0.08}>
             <span className="eyebrow text-ink/40">Visión</span>
             <p className="mt-5 font-serif text-[clamp(1.4rem,2.1vw,1.9rem)] leading-[1.3] text-ink/85">
-              Ser la empresa líder en mantenimiento industrial de la región, enfocada en los más altos
-              estándares de calidad, seguridad, productividad y competitividad.
+              Ser una empresa líder, enfocada en los más altos estándares de calidad, seguridad,
+              productividad y competitividad en el mantenimiento industrial, que nos permita
+              convertirnos en la mejor alternativa de la región.
             </p>
           </Reveal>
         </div>

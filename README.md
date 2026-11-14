@@ -51,5 +51,10 @@ El formulario de contacto no usa backend: arma un mensaje y abre WhatsApp
 
 ## Contenido de origen
 
-El contenido proviene de `backups/` (portafolio en PDF y documento de servicios). Las fotos se
-recortaron para eliminar las marcas de agua de fecha y se convirtieron a WebP.
+El contenido proviene de **https://rtimantenimiento.com** (páginas Quiénes somos, Servicios,
+Seguridad y Nuestra gente), del portafolio en PDF y del documento de servicios de `backups/`.
+Las fotos se recortaron para eliminar las marcas de agua de fecha y se convirtieron a WebP.
+
+Los textos de servicios, seguridad y "nuestra gente" son literales del sitio actual; los titulares
+de sección son copy de diseño. Si algo cambia en la empresa, se edita en `src/data/site.ts` y
+`src/components/`.

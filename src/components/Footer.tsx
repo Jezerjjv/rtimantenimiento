@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="relative overflow-hidden border-t border-white/10 bg-ink">
       <div className="shell relative z-10 pt-16 sm:pt-20">
         <div className="grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4">
             <button type="button" onClick={scrollToTop} aria-label="Ir al inicio" className="text-bone">
               <Logo />
             </button>
@@ -65,56 +65,79 @@ export function Footer() {
                   Contacto
                 </button>
               </li>
+              <li>
+                <a
+                  href={site.portfolio}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-[13px] text-bone/55 transition-colors hover:text-flame"
+                >
+                  Portafolio (PDF)
+                </a>
+              </li>
             </ul>
           </div>
 
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <h3 className="font-mono text-[9px] uppercase tracking-[0.24em] text-bone/30">
               Directo
             </h3>
             <ul className="mt-5 space-y-2.5">
-              <li>
-                <a
-                  href={`tel:${site.phone}`}
-                  className="text-[13px] text-bone/55 transition-colors hover:text-flame"
-                >
-                  {site.phoneDisplay}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`tel:+57${site.landline.replace(/\s/g, '')}`}
-                  className="text-[13px] text-bone/55 transition-colors hover:text-flame"
-                >
-                  {site.landline}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${site.email}`}
-                  className="break-all text-[13px] text-bone/55 transition-colors hover:text-flame"
-                >
-                  {site.email}
-                </a>
-              </li>
+              {site.phones.map((phone) => (
+                <li key={phone.tel}>
+                  <a
+                    href={`tel:${phone.tel}`}
+                    className="text-[13px] text-bone/55 transition-colors hover:text-flame"
+                  >
+                    {phone.display}
+                  </a>
+                </li>
+              ))}
+              {site.emails.map((email) => (
+                <li key={email.address}>
+                  <a
+                    href={`mailto:${email.address}`}
+                    className="break-all text-[13px] text-bone/55 transition-colors hover:text-flame"
+                  >
+                    {email.address}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-white/10 py-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-5 border-t border-white/10 py-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-bone/25">
             © {year} {site.name} Ltda. — Todos los derechos reservados
           </p>
-          <button
-            type="button"
-            onClick={scrollToTop}
-            className="group inline-flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.18em] text-bone/35 transition-colors hover:text-bone"
-          >
-            Volver arriba
-            <span className="grid size-7 place-items-center rounded-full border border-white/15 transition-colors group-hover:border-flame group-hover:text-flame">
-              <ArrowUp className="size-3" />
-            </span>
-          </button>
+
+          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-7">
+            <a
+              href="https://jezer.es"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Diseño por Jezer — jezer.es"
+              className="group inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.12em] text-bone/35 transition-colors hover:text-bone/70"
+            >
+              <span>design by</span>
+              <span className="relative text-bone/60 transition-colors group-hover:text-flame">
+                jezer
+                <span className="absolute inset-x-0 -bottom-0.5 h-px bg-current opacity-40 transition-opacity group-hover:opacity-100" />
+              </span>
+            </a>
+
+            <button
+              type="button"
+              onClick={scrollToTop}
+              className="group inline-flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.18em] text-bone/35 transition-colors hover:text-bone"
+            >
+              Volver arriba
+              <span className="grid size-7 place-items-center rounded-full border border-white/15 transition-colors group-hover:border-flame group-hover:text-flame">
+                <ArrowUp className="size-3" />
+              </span>
+            </button>
+          </div>
         </div>
       </div>
 

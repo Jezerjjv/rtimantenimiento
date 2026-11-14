@@ -1,11 +1,11 @@
 import { useRef, useState } from 'react'
 import type { MouseEvent } from 'react'
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring } from 'motion/react'
-import { Plus } from 'lucide-react'
+import { FileDown, Plus } from 'lucide-react'
 import { SectionHead } from './SectionHead'
 import { Reveal } from './Reveal'
 import { Button } from './Button'
-import { services } from '../data/site'
+import { services, site } from '../data/site'
 import { useMediaQuery } from '../lib/useMediaQuery'
 import { scrollToId } from '../lib/scroll'
 
@@ -31,7 +31,7 @@ export function Services() {
   return (
     <section id="servicios" className="relative overflow-hidden bg-ink py-24 sm:py-32 lg:py-40">
       <div className="shell">
-        <SectionHead index="02" label="Servicios" tone="light" />
+        <SectionHead index="03" label="Servicios" tone="light" />
 
         <div className="mt-10 grid gap-8 lg:mt-16 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-7">
@@ -43,7 +43,7 @@ export function Services() {
           </Reveal>
           <Reveal delay={0.1} className="lg:col-span-4 lg:col-start-9">
             <p className="text-[15px] leading-relaxed text-bone/55">
-              Seis líneas de trabajo que se combinan según lo que necesite tu operación, desde una
+              Siete líneas de trabajo que se combinan según lo que necesite tu operación, desde una
               pieza hasta una parada de planta completa.
             </p>
           </Reveal>
@@ -159,11 +159,22 @@ export function Services() {
           </div>
         </div>
 
-        <Reveal className="mt-12 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
-          <p className="max-w-[52ch] text-[14px] leading-relaxed text-bone/45">
-            ¿Tu necesidad no aparece en la lista? La mayoría de nuestros trabajos empiezan con una
-            visita técnica y una propuesta a la medida.
-          </p>
+        <Reveal className="mt-12 flex flex-col items-start justify-between gap-8 border-t border-white/10 pt-8 sm:flex-row sm:items-center">
+          <div>
+            <p className="max-w-[52ch] text-[14px] leading-relaxed text-bone/45">
+              ¿Tu necesidad no aparece en la lista? La mayoría de nuestros trabajos empiezan con una
+              visita técnica.
+            </p>
+            <a
+              href={site.portfolio}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="group mt-4 inline-flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.18em] text-bone/50 transition-colors hover:text-flame"
+            >
+              <FileDown className="size-4" strokeWidth={1.6} />
+              Descargar portafolio de servicios (PDF)
+            </a>
+          </div>
           <Button variant="outline" onClick={() => scrollToId('contacto')}>
             Hablemos de tu planta
           </Button>

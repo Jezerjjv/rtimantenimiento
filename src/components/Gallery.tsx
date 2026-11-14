@@ -64,7 +64,7 @@ export function Gallery() {
         }
       >
         <div className="shell pt-24 sm:pt-32 lg:pt-24">
-          <SectionHead index="04" label="En planta" tone="light" />
+          <SectionHead index="05" label="En planta" tone="light" />
 
           <div className="mt-8 flex flex-wrap items-end justify-between gap-6 lg:mt-9">
             <h2 className="display text-[clamp(2.15rem,4.4vw,3.8rem)]">

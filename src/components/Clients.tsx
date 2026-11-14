@@ -6,7 +6,7 @@ export function Clients() {
   return (
     <section className="bg-ink-2 py-24 sm:py-28 lg:py-32">
       <div className="shell">
-        <SectionHead index="06" label="Clientes" tone="light" />
+        <SectionHead index="07" label="Clientes" tone="light" />
 
         <div className="mt-10 grid gap-8 lg:mt-14 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-7">

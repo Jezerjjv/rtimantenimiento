@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
-import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react'
+import { Mail, MapPin, Phone } from 'lucide-react'
 import { SectionHead } from './SectionHead'
 import { Reveal } from './Reveal'
 import { Button } from './Button'
@@ -61,7 +61,7 @@ export function Contact() {
       />
 
       <div className="shell relative">
-        <SectionHead index="07" label="Contacto" tone="light" />
+        <SectionHead index="08" label="Contacto" tone="light" />
 
         <div className="mt-10 grid gap-14 lg:mt-16 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-6">
@@ -84,33 +84,46 @@ export function Contact() {
 
             <Reveal delay={0.14}>
               <div className="mt-10 divide-y divide-white/10 border-y border-white/10">
-                <a
-                  href={`tel:${site.phone}`}
-                  className="group flex items-center justify-between gap-6 py-5"
-                >
-                  <span className="flex items-center gap-4">
+                <div className="flex items-start justify-between gap-6 py-5">
+                  <span className="flex items-center gap-4 pt-0.5">
                     <Phone className="size-4 text-flame" strokeWidth={1.6} />
                     <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-bone/35">
-                      Móvil
+                      Teléfonos
                     </span>
                   </span>
-                  <span className="flex items-center gap-3 text-[15px] text-bone/85 transition-colors group-hover:text-flame">
-                    {site.phoneDisplay}
-                    <ArrowUpRight className="size-4 opacity-0 transition-opacity group-hover:opacity-100" />
-                  </span>
-                </a>
-                <a href={`mailto:${site.email}`} className="group flex items-center justify-between gap-6 py-5">
-                  <span className="flex items-center gap-4">
+                  <div className="flex flex-col items-end gap-1.5">
+                    {site.phones.map((phone) => (
+                      <a
+                        key={phone.tel}
+                        href={`tel:${phone.tel}`}
+                        className="text-[14px] text-bone/85 transition-colors hover:text-flame"
+                      >
+                        {phone.display}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex items-start justify-between gap-6 py-5">
+                  <span className="flex items-center gap-4 pt-0.5">
                     <Mail className="size-4 text-flame" strokeWidth={1.6} />
                     <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-bone/35">
                       Correo
                     </span>
                   </span>
-                  <span className="flex max-w-[62%] items-center gap-3 break-words text-right text-[13px] text-bone/85 transition-colors group-hover:text-flame">
-                    {site.email}
-                    <ArrowUpRight className="size-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
-                  </span>
-                </a>
+                  <div className="flex flex-col items-end gap-1.5">
+                    {site.emails.map((email) => (
+                      <a
+                        key={email.address}
+                        href={`mailto:${email.address}`}
+                        className="break-all text-right text-[13px] text-bone/85 transition-colors hover:text-flame"
+                      >
+                        {email.address}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
                 <a
                   href={site.mapsUrl}
                   target="_blank"
@@ -144,7 +157,7 @@ export function Contact() {
                 className="rounded-[4px] border border-white/12 bg-white/[0.03] p-6 backdrop-blur-sm sm:p-8"
               >
                 <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-flame">
-                  Cotización sin costo
+                  Cuéntanos tu necesidad
                 </p>
                 <h3 className="mt-3 font-serif text-2xl leading-tight text-bone/90 sm:text-[28px]">
                   Escríbenos y te contactamos.

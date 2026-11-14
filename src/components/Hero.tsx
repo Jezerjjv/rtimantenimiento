@@ -89,16 +89,16 @@ export function Hero() {
           </span>
         </motion.div>
 
-        <h1 className="display text-[clamp(2.7rem,8.6vw,8.2rem)]">
+        <h1 className="display text-[clamp(2.6rem,8.2vw,7.8rem)]">
           <span className="block">
-            <WordReveal text="MANTENIMIENTO" delay={0.15} />
+            <WordReveal text="SOLUCIONES" delay={0.15} />
           </span>
           <span className="block">
-            <WordReveal text="INDUSTRIAL" delay={0.25} />
+            <WordReveal text="INTEGRALES" delay={0.25} />
           </span>
           <span className="block">
             <WordReveal
-              text="sin paradas."
+              text="para el sector industrial."
               delay={0.35}
               wordClassName="serif-accent normal-case text-flame"
             />
@@ -112,8 +112,8 @@ export function Hero() {
             animate={reduce ? undefined : { opacity: 1, y: 0 }}
             transition={{ delay: 0.75, duration: 0.9 }}
           >
-            Soluciones integrales para el sector industrial: mecánica, electricidad, mecanizado y
-            montajes. Personal propio, procedimientos seguros y documentación al día.
+            Calidad, seguridad y cumplimiento normativo en cada uno de sus proyectos. Mantenimiento
+            mecánico y eléctrico, fabricación, mecanizado y montajes industriales.
           </motion.p>
 
           <motion.div

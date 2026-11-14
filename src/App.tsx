@@ -4,8 +4,9 @@ import { Nav } from './components/Nav'
 import { Hero } from './components/Hero'
 import { Capabilities } from './components/Capabilities'
 import { About } from './components/About'
+import { People } from './components/People'
 import { Services } from './components/Services'
-import { Process } from './components/Process'
+import { Approach } from './components/Approach'
 import { Gallery } from './components/Gallery'
 import { Safety } from './components/Safety'
 import { Clients } from './components/Clients'
@@ -53,8 +54,9 @@ export default function App() {
         <Hero />
         <Capabilities />
         <About />
+        <People />
         <Services />
-        <Process />
+        <Approach />
         <Gallery />
         <Safety />
         <Clients />

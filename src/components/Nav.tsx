@@ -66,7 +66,7 @@ export function Nav() {
                 <Logo />
               </button>
 
-              <nav className="hidden items-center gap-7 md:flex" aria-label="Navegación principal">
+              <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegación principal">
                 {navLinks.map((link) => (
                   <button
                     key={link.id}
@@ -95,7 +95,7 @@ export function Nav() {
                 <button
                   type="button"
                   onClick={() => setOpen((value) => !value)}
-                  className="grid size-11 place-items-center rounded-full border border-white/15 text-bone transition-colors hover:bg-white/5 md:hidden"
+                  className="grid size-11 place-items-center rounded-full border border-white/15 text-bone transition-colors hover:bg-white/5 lg:hidden"
                   aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
                   aria-expanded={open}
                 >
@@ -110,7 +110,7 @@ export function Nav() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-40 flex flex-col bg-ink md:hidden"
+            className="fixed inset-0 z-40 flex flex-col bg-ink lg:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
